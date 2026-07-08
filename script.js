@@ -129,15 +129,11 @@ setInterval(updateCounter, 1000);
 
 const music = document.getElementById("music");
 
-window.addEventListener("click", () => {
-
+window.addEventListener("load", () => {
     music.play().catch(error => {
-
-        console.log("Autoplay blocked");
-
+        console.log("Autoplay blocked by browser.");
     });
-
-}, { once: true });
+});
 
 
 /* ===========================
